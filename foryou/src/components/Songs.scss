@@ -1,0 +1,99 @@
+// Songs.scss
+$primary-color: #333;
+$secondary-color: #555;
+$background-color: #fce4ec; // Light pink background color
+$link-color: #BF8654;
+$link-hover-color: darken($link-color, 10%);
+$border-radius: 7px;
+$box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.37);
+$padding: 20px;
+$margin: 20px;
+$button-bg-color: #3498db;
+$button-hover-color: darken($button-bg-color, 10%);
+$button-text-color: white;
+
+body {
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Arial', sans-serif; // Use web-safe font
+}
+
+.songs-container {
+  background-color: white;
+  height: auto;
+  border-radius: $border-radius;
+  margin: auto;
+  box-shadow: $box-shadow;
+  width: 90%;
+  max-width: 1050px;
+  padding: $padding;
+  text-align: center;
+
+  h1 {
+    font-weight: lighter;
+    font-size: 2.5rem;
+    margin-bottom: $margin;
+    
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    padding-left: 35px;
+    padding-right: 35px;
+    text-align: justify;
+    font-weight: bolder;
+    text-indent: 30px;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.875rem;
+    }
+  }
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-hover-color;
+      text-decoration: underline; // Add underline to indicate hover
+    }
+
+    &:active {
+      color: darkorange;
+    }
+  }
+
+  .back-button {
+    background-color: $button-bg-color;
+    color: $button-text-color;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: $box-shadow;
+    transition: background-color 0.3s;
+    margin-top: $margin;
+
+    &:hover {
+      background-color: $button-hover-color;
+    }
+  }
+}

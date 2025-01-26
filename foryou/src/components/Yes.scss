@@ -1,0 +1,98 @@
+// CSS Variables
+$principal-font-size: 2.5rem;
+$secondary-font-size: 2rem;
+$paragraph-font-size: 1rem;
+$small-words-font-size: 0.875rem;
+$primary-color: #333;
+$secondary-color: #555;
+$link-color: #3498db;
+$button-hover-color: darken($link-color, 10%);
+$background-color: #f9f9f9;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$padding-20: 20px;
+$padding-10: 10px;
+$margin-20: 20px;
+$margin-10: 10px;
+$card-width: 500px; // Reduce the width of the card
+
+// Styling for Principal Heading
+.principal {
+  font-size: $principal-font-size;
+  color: $primary-color;
+  text-align: center; // Center align the text
+  margin-bottom: $margin-10;
+  margin-top: $margin-10; // Add margin at the top to prevent cutting off
+  padding-top: $padding-20; // Add padding at the top to prevent cutting off
+}
+
+h2 {
+  font-size: $secondary-font-size;
+  color: $secondary-color;
+  text-align: center;
+  margin-bottom: $margin-10;
+}
+
+p {
+  font-size: $paragraph-font-size;
+  color: $secondary-color;
+  text-align: center;
+  margin: 0 $padding-20 $padding-20 $padding-20;
+  margin-bottom: $margin-10;
+}
+
+.smallWords {
+  font-size: $small-words-font-size;
+  color: $primary-color;
+  text-align: center;
+}
+
+img.displayed {
+  border-radius: 10px;
+  box-shadow: $box-shadow;
+  margin: $margin-20 0; // Add space between the text and the image
+}
+
+button.click-button {
+  background-color: $link-color;
+  color: white;
+  border: none;
+  padding: $padding-10 $padding-20;
+  font-size: $paragraph-font-size;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: $box-shadow;
+  transition: background-color 0.3s;
+  margin-top: $margin-20; // Add space above the button
+  display: block;
+  margin-left: auto;
+  margin-right: auto; // Center the button
+
+  &:hover {
+    background-color: $button-hover-color;
+  }
+}
+
+// Styling for Body
+body {
+  background-color: $background-color;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; // Center align horizontally
+  align-items: center; // Center align vertically
+  height: 100vh;
+  overflow: hidden; // Prevent scrolling
+}
+
+// Styling for Main Section
+main {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: $padding-20;
+  max-width: $card-width; // Reduce the width of the card
+  text-align: center;
+  max-height: 100vh;
+  overflow: auto; // Add scroll within the main content if it overflows
+}

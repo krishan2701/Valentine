@@ -1,0 +1,54 @@
+// Photos.scss
+$background-color: #fce4ec; // Light pink background color
+$border-radius: 7px;
+$box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.37);
+$margin: 20px;
+$button-bg-color: #3498db;
+$button-hover-color: darken($button-bg-color, 10%);
+$button-text-color: white;
+
+body {
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Arial', sans-serif; // Use web-safe font
+}
+
+.photos-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // 3 images per row
+  gap: $margin;
+  padding: $margin;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  background-color: white;
+
+  img {
+    max-width: 100px; // Make the images smaller
+    height: auto;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+  }
+
+  .back-button {
+    grid-column: span 3; // Center the back button across all columns
+    background-color: $button-bg-color;
+    color: $button-text-color;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: $box-shadow;
+    transition: background-color 0.3s;
+    margin-top: $margin;
+
+    &:hover {
+      background-color: $button-hover-color;
+    }
+  }
+}
